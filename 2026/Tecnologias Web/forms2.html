@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios parte 2</title>
+</head>
+<body>
+    <!--  Nome do coiso, metodo utilizado e-->
+    <form name="formAula" method="GET" action="processamento.php">
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" value="Tecnologia em Análise e desenvolvimetno de Sistemas">
+
+        <br><br> 
+        <label for="campus">Campus: </label>
+        <input type="text" id="campus" name="campus" value="Telêmaco Borba">
+
+        <br><br> 
+        <label for="senha">Senha:</label>
+        <input for="password" id="senha" name="senha" required>
+
+        <br><br> 
+        <label for="codigo">Código</label>
+        <input type="text" id="codigo" name="text" pattern="[0-9]{4}">
+
+        <br><br> 
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" cols="40">Este texto está dentro do text area</textarea>
+
+        <br><br>
+        <label for="cidade">Cidade:</label>
+        <select id="name" name="cidade">
+            <option value="Telêmaco borba">Telêmaco Borba</option>
+            <option value="São Vicente">São Vicente</option>
+            <option value="Parque 10">Parque 10</option>
+            <option value="Nova Hamburgo">Nova Hamburgo</option>
+            <option value="Presidente Prudente">Presidente Prudente</option>
+        </select>
+        
+        <!--    input type="submit" value="Enviar"> -->
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
