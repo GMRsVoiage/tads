@@ -1,0 +1,27 @@
+# Artefatos de compilação
+*.exe
+*.o
+*.obj
+*.out
+*.class
+
+# Diretórios de build
+build/
+dist/
+target/
+cmake-build-*/
+
+# IDEs e configurações locais
+.vscode/
+.idea/
+nbproject/private/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+*~
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
