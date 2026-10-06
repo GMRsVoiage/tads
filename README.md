@@ -8,6 +8,7 @@ O curso é organizado em seis períodos. Neste repositório, os materiais são a
 
 - [2026](./2026/) — materiais acadêmicos de 2026
   - [Algoritmos e Programação II](./2026/Algoritmos%20e%20Programa%C3%A7%C3%A3o%20II/)
+  - [Gestão de Websites](./2026/Gest%C3%A3o%20de%20Websites/)
   - [Jogos Digitais](./2026/Jogos%20Digitais/)
   - [Tecnologias Web](./2026/Tecnologias%20Web/)
 

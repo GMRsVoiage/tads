@@ -11,6 +11,17 @@ dist/
 target/
 cmake-build-*/
 
+# Node.js / Next.js
+node_modules/
+.next/
+coverage/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+!.env.example
+
 # IDEs e configurações locais
 .vscode/
 .idea/
