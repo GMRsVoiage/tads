@@ -11,13 +11,18 @@ O diretório local mostrado pelo professor chama-se `IFMarket`. Como a aula já 
 - `index.html` com cabeçalho, barra de navegação e área principal;
 - `css/navBar.css`;
 - diretório `img/`;
+- `sobre.html` existe no projeto do professor, mas seu conteúdo ainda não foi recuperado;
+- `formLogin.html` existe no projeto do professor, mas seu conteúdo ainda não foi recuperado;
 - navegação para:
   - `index.html`;
   - `sobre.html`;
   - `formLogin.html`;
-- referência a `img/logotipo.png`.
+- `index.html` marca **Página Inicial** com `class="active"`;
+- o item **Login** está alinhado à direita com `style="float:right;"`;
+- referência a `img/logotipo.png`;
+- foram exibidos em aula pelo menos seis parágrafos `<p>Teste</p>` na área `main`.
 
-No trecho visível de `navBar.css` foram confirmadas regras para `main`, `nav`, `nav ul`, `nav li` e `nav li a`.
+No trecho visível de `navBar.css` foram confirmadas regras para `main`, `nav`, `nav ul`, `nav li`, `nav li a` e `nav li a:hover`.
 
 ## Ainda não recuperado
 
@@ -25,6 +30,6 @@ No trecho visível de `navBar.css` foram confirmadas regras para `main`, `nav`, 
 - `img/logotipo.png`;
 - conteúdo de `sobre.html`;
 - conteúdo de `formLogin.html`;
-- demais regras CSS adicionadas após o último registro.
+- demais regras CSS e HTML que ainda não apareceram nas capturas.
 
-Os arquivos ausentes não serão inventados. Novos trechos serão incorporados conforme forem aparecendo em aula.
+Os arquivos ausentes não serão inventados. Novos trechos serão incorporados conforme forem aparecendo em aula ou forem localizados no material oficial do professor.
