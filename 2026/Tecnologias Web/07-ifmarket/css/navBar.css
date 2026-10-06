@@ -1,0 +1,27 @@
+/*
+ * IFMarket — reconstrução parcial da aula de 05/10/2026.
+ * O trecho anterior ao bloco main ainda não foi recuperado.
+ */
+
+main {
+
+}
+
+nav {
+    top: 0; /* Define este limite como o topo da janela */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove margens da lista */
+    padding: 0; /* Remove espaçamentos internos da lista */
+    background-color: #333333; /* Define um fundo cinza escuro */
+}
+
+nav li {
+    float: left; /* Posiciona os itens da lista à esquerda, lado a lado */
+}
+
+nav li a {
+    display: block; /* Faz o link formar uma caixa de bloco */
+}

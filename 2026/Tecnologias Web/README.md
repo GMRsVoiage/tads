@@ -18,12 +18,6 @@ Tecnologias Web/
 ├── 02-links-e-navegacao/
 │   ├── links.html
 │   └── cores/
-│       ├── amarelo.html
-│       ├── azul.html
-│       ├── preto.html
-│       ├── rosa.html
-│       ├── verde.html
-│       └── vermelho.html
 ├── 03-listas-e-tabelas/
 │   ├── listas.html
 │   └── tabelas.html
@@ -31,13 +25,17 @@ Tecnologias Web/
 │   ├── midias.html
 │   ├── iframe.html
 │   └── assets/
-│       ├── audio/
-│       └── images/
 ├── 05-formularios/
 │   ├── forms.html
 │   └── forms2.html
-└── 06-semantica/
-    └── semantica.html
+├── 06-semantica/
+│   └── semantica.html
+└── 07-ifmarket/
+    ├── README.md
+    ├── index.html
+    ├── css/
+    │   └── navBar.css
+    └── img/
 ```
 
 ## Conteúdos
@@ -65,6 +63,10 @@ Exercícios com tipos de `input`, formulários e campos adicionais.
 ### 06 — Semântica
 
 Exercício com elementos semânticos como `header`, `nav`, `main`, `section`, `article`, `aside` e `footer`.
+
+### 07 — IFMarket
+
+Projeto acompanhado em aula em 05/10/2026. Como parte inicial da aula não foi registrada localmente, os arquivos estão sendo reconstruídos incrementalmente a partir do código exibido pelo professor. Consulte `07-ifmarket/README.md` para saber o que foi confirmado e o que ainda está pendente.
 
 ## Relação com o Classroom
 
