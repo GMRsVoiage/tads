@@ -16,6 +16,7 @@ nav ul {
     margin: 0; /* Remove margens da lista */
     padding: 0; /* Remove espaçamentos internos da lista */
     background-color: #333333; /* Define um fundo cinza escuro */
+    overflow: hidden; /* Oculta conteúdo que ultrapassa a caixa */
 }
 
 nav li {
@@ -24,4 +25,12 @@ nav li {
 
 nav li a {
     display: block; /* Faz o link formar uma caixa de bloco */
+    color: white; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto dentro do link */
+    padding: 14px 16px; /* Espaço interno: 14px (Cima / Baixo) e 16px (Laterais) */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+nav li a:hover{
+    background-color: #111111;
 }
