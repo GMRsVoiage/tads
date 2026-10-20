@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMarket</title>
+    <link href="css/navBar.css" rel="stylesheet">
+    <link href="css/estiloForm.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <img src="img/logotipo.png" style="width:200px;">
+        <h2>IFMarket</h2>
+        <p>A plataforma de anúncios do IFPR campus TB!</p>
+    </header>
+
+    <!-- Barra de Navegação da página-->
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Ir para a página inicial">Página Inicial</a></li>
+            <li><a href="sobre.html" title="Saiba mais sobre a plataforma">Sobre</a></li>
+            <li style="float:right;"><a href="formLogin.html" title="Faça login para acessar as funções do sistema" class="active">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área principal (conteúdo) da Página -->
+    <main>
+       
+        <section class="secaoFormulario">   
+            <h2>Cadastro de Usuario</h2>
+            <p>Preencha os campos abaixos. Os campos com * são obrigatorios.</p>
+
+            <form action="#ActionUsuario.php" method="POST" class="formulario">
+
+                <div class="campo">
+                    <label for="fotoUsuario">Foto</label>
+                    <input type="file" id="fotoUsuario" name="fotoUsuario" accept="image/*">               
+                </div>
+
+                <div class="campo">
+                    <label for="nomeUsuario">Nome Completo</label>
+                    <input type="text" id="nomeUsuario" name="nomeUsuario" required>                
+                </div>
+
+                <div class="campo">
+                    <label for="dataNascimentoUsuario">Data de Nascimento</label>
+                    <input type="date" id="nascimentoUsuario" name="nascimentoUsuario" required>                  
+                </div>
+
+                <div class="campo">
+                    <label for="cidadeUsuario">Cidade</label>
+                    <select id="cidadeUsuario" name="cidadeUsuario" required>
+                        <option value="" selected disabled>Selecione uma cidade</option>
+                        <option value="Curiuva">Curiuva</option>
+                        <option value="Imbau">Imbau</option>
+                        <option value="Lagoinha">Lagoinha</option>
+                        <option value="Maringa">Maringa</option>
+                        <option value="Ortigueira">Ortigueira</option>
+                        <option value="Reserva">Reserva</option>
+                        <option value="São Vicente">São Vicente</option>
+                        <option value="Telêmaco Borba">Telêmaco Borba</option>
+                        <option value="Tibagi">Tibagi</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="emailUsuario">E-mail</label>
+                    <input type="email" id="emailUsuario" name="emailUsuario" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senhaUsuario">Senha</label>
+                    <input type="password" id="senhaUsuario" name="senhaUsuario" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenhaUsuario">Confirmar Senha</label>
+                    <input type="password" id="confirmarSenhaUsuario" name="confirmarSenhaUsuario" required>
+                </div>
+
+                <div class="acoes">
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        IFPR Campus Telêmaco Borba - TADS - Disciplina de Tecnologias Web
+    </footer>
+    
+</body>
+</html>

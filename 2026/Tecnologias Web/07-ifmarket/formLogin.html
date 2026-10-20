@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMarket</title>
+    <link href="css/navBar.css" rel="stylesheet">
+    <link href="css/estiloForm.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <img src="img/logotipo.png" style="width:200px;">
+        <h2>IFMarket</h2>
+        <p>A plataforma de anúncios do IFPR campus TB!</p>
+    </header>
+
+    <!-- Barra de Navegação da página-->
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Ir para a página inicial">Página Inicial</a></li>
+            <li><a href="sobre.html" title="Saiba mais sobre a plataforma">Sobre</a></li>
+            <li style="float:right;"><a href="formLogin.html" title="Faça login para acessar as funções do sistema" class="active">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área principal (conteúdo) da Página -->
+    <main>
+        <section class="secaoFormulario">
+            <form action="#ActionLogin.php" method="POST" class="formulario">
+
+                <div class="campo">
+                    <label for="emailUsuario">E-mail</label>
+                    <input type="email" id="emailUsuario" name="emailUsuario" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senhaUsuario">Senha</label>
+                    <input type="password" id="senhaUsuario" name="senhaUsuario" required>
+                </div>
+
+                <div class="campo">
+                    <button type="submit">Logar</button>
+                </div>
+
+            </form>
+            <p>Não tem uma conta ainda? <a href="formUsuario.html">Clique Aqui</a> </p>
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        IFPR Campus Telêmaco Borba - TADS - Disciplina de Tecnologias Web
+    </footer>
+    
+</body>
+</html>

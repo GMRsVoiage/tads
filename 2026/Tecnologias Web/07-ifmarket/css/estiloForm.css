@@ -1,0 +1,61 @@
+.secaoFormulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.formulario {
+    background-color: #F1F8E9;
+    border: 1px solid #81C784;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
+}
+.campo {
+    margin-bottom: 18px;   
+}
+.campo label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.campo input:focus,
+.campo select:focus {
+    border-color: #4CAF50;
+    outline: 2px solid #4CAF50;
+}
+.acoes button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* estilos para botão de envio, o professor fez diferente, ele fez oque está no codigo comentado abaixo */
+.acoes button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.acoes button[type="reset"]:hover {
+    background-color: #f44336; 
+}
+/* Codigo que o professor fez abaixo.
+.botao-acao{
+}
+.botao-acao:hover{
+    background-color: #45a049;
+}
+.botao-limpar{
+    background-color: #f44336;
+}
+.botao-limpar:hover{
+    background-color: #e53935;
+}
+    era para ele ser utilizado para os dois botões, porem eu quis fazer diferente.
+*/

@@ -1,14 +1,39 @@
-/*
- * IFMarket — reconstrução parcial da aula de 05/10/2026.
- * O trecho anterior ao bloco main ainda não foi recuperado.
- */
+/* Sintaxe do CSS
+
+seletor {
+    propriedade1 : valor;
+    propriedade2 : valor;
+}
+
+*/
+
+/* Aplica a fonte a todos os elementos da página */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+/* Remove a margem e o espaçamento interno do corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center; /* Centraliza textos e elementos inline, como a imagem */
+    padding: 20px; /* Cria um espaçamento interno de 20px em todos os lados */
+}
 
 main {
-
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 1140px; /* Limita a largura a 1140px em telas grandes */
+    margin: 0 auto; /* Sem margem vertical; Margens laterais automáticas (Centralizar o elemento) */
+    padding: 20px 20px 80px; /* Topo: 20px; Laterais: 20px; Base: 80px (Para rodapé fixo) */
+    box-sizing: border-box; /* Inclui padding e borda na largura definida */
 }
 
 nav {
     top: 0; /* Define este limite como o topo da janela */
+    position: sticky; /* Mantém o elemento no fluxo e prende ao atingir o limite indicado */
 }
 
 nav ul {
@@ -27,10 +52,30 @@ nav li a {
     display: block; /* Faz o link formar uma caixa de bloco */
     color: white; /* Define a cor do texto */
     text-align: center; /* Centraliza o texto dentro do link */
-    padding: 14px 16px; /* Espaço interno: 14px (Cima / Baixo) e 16px (Laterais) */
+    padding: 14px 16px; /*Espaço interno: 14px (Cima / Baixo) e 16px (Laterais) */
     text-decoration: none; /* Remove o sublinhado do link */
 }
 
 nav li a:hover{
-    background-color: #111111;
+    background-color: #111111; 
+}
+
+nav li a.active {
+    background-color: #4CAF50;
+}
+
+h2, p {
+    margin: 10px;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed; /*Retira o rodapé do fluxo e o mantém fixo durante a rolagem */
+    box-sizing: border-box;
 }
