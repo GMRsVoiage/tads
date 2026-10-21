@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080315">
+  <title>Temas e plugins no WordPress</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080315;
+      --panel: rgba(24, 10, 48, .92);
+      --text: #fbf8ff;
+      --muted: #c7bbd9;
+      --a: #00e8f2;
+      --b: #d45bff;
+      --line: rgba(212, 91, 255, .45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 10% 0%, #291047, transparent 45%), radial-gradient(ellipse at 100% 100%, #063341, transparent 35%), var(--bg);
+      color: var(--text);
+      font: 18px/1.55 "Segoe UI", Arial, sans-serif;
+    }
+    .deck { min-height: 100vh; display: grid; grid-template-rows: 1fr auto; padding: clamp(16px, 4vw, 52px); }
+    .slide {
+      width: min(1100px, 100%);
+      min-height: min(680px, calc(100vh - 120px));
+      margin: auto;
+      padding: clamp(24px, 6vw, 72px);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(28, 12, 53, .95), rgba(8, 26, 43, .95));
+      box-shadow: 0 24px 80px rgba(0,0,0,.4), inset 0 1px rgba(255,255,255,.08);
+      display: none;
+      align-content: center;
+    }
+    .slide.active { display: grid; }
+    .eyebrow { color: var(--a); font-size: .76rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+    h1, h2 { line-height: 1.08; margin: .25em 0 .5em; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.6rem, 8vw, 6rem); background: linear-gradient(100deg, white, var(--a), var(--b)); color: transparent; background-clip: text; }
+    h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
+    h3 { color: var(--a); font-size: 1.1rem; margin: 0 0 .35rem; }
+    p { color: var(--muted); margin: .35rem 0 1rem; max-width: 78ch; }
+    .lead { font-size: clamp(1.15rem, 2.2vw, 1.55rem); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 1.2rem; }
+    .card { border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.045); padding: 20px; }
+    .card p { font-size: .95rem; margin-bottom: .3rem; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 1rem; }
+    ol, ul { color: var(--muted); padding-left: 1.3em; }
+    li { margin: .48em 0; }
+    strong { color: var(--text); }
+    a { color: var(--a); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: .2rem .65rem; color: var(--a); font-size: .83rem; margin: .2rem .25rem .2rem 0; }
+    .names { border: 1px dashed var(--line); border-radius: 12px; padding: 12px 16px; }
+    details { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .65rem; }
+    summary { color: var(--a); cursor: pointer; font-size: .9rem; }
+    .notes { font-size: .9rem; }
+    .notes p { margin-bottom: .4rem; }
+    .controls { width: min(1100px, 100%); margin: 16px auto 0; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .controls button { color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; cursor: pointer; font: inherit; }
+    .controls button:hover, .controls button:focus-visible { border-color: var(--a); outline: 2px solid transparent; }
+    #counter { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .progress { position: fixed; inset: 0 auto auto 0; height: 4px; width: 0; background: linear-gradient(90deg, var(--a), var(--b)); transition: width .2s ease; }
+    .references { font-size: .86rem; }
+    .references li { margin: .28rem 0; }
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .grid, .split { grid-template-columns: 1fr; }
+      .slide { min-height: calc(100vh - 115px); border-radius: 18px; }
+      .controls button { padding: 9px 12px; }
+    }
+    @media print {
+      body { background: white; color: black; }
+      .deck { display: block; padding: 0; }
+      .slide { display: grid !important; min-height: 95vh; page-break-after: always; box-shadow: none; background: white; color: black; }
+      .slide p, .slide li { color: #333; }
+      .controls, .progress, details { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <main class="deck" aria-label="Apresentação sobre temas e plugins">
+    <section class="slide active" aria-label="Capa">
+      <p class="eyebrow">Gestão de Websites · WordPress</p>
+      <h1>Temas<br>+ plugins</h1>
+      <p class="lead">Como o site se apresenta e o que ele consegue fazer.</p>
+      <p class="names"><strong>Integrantes:</strong> Rafael e Wesley</p>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>Olá! meu nome é Rafael e vamos explicar a diferença entre tema e plugin, mostrar exemplos populares e demonstrar os dois em um blog com dez posts e cinco páginas.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Diferença entre tema e plugin">
+      <p class="eyebrow">01 · Conceito</p>
+      <h2>Tema ou plugin?</h2>
+      <div class="split">
+        <article class="card"><h3>Tema = apresentação</h3><p>Layout, cores, tipografia, cabeçalho, rodapé e navegação.</p><span class="tag">Como aparece?</span></article>
+        <article class="card"><h3>Plugin = funcionalidade</h3><p>Formulários, SEO, loja virtual, backup, segurança e integrações.</p><span class="tag">O que faz?</span></article>
+      </div>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>O tema controla principalmente como o conteúdo é apresentado. Os posts e páginas normalmente permanecem ao trocar de tema. Plugin é uma extensão que acrescenta ou altera recursos. Eles trabalham juntos, mas têm funções diferentes.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Exemplos de temas">
+      <p class="eyebrow">02 · Temas populares</p>
+      <h2>Três exemplos</h2>
+      <div class="grid">
+        <article class="card"><h3>Astra</h3><p>Personalizável para blogs, negócios e lojas.</p><span class="tag">1M+ instalações*</span></article>
+        <article class="card"><h3>Kadence</h3><p>Controles globais e opções para cabeçalho e rodapé.</p><span class="tag">500 mil+*</span></article>
+        <article class="card"><h3>Neve</h3><p>Leve e responsivo para blogs, portfólios e lojas.</p><span class="tag">200 mil+*</span></article>
+      </div>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>O Astra serve a diferentes tipos de sites e tinha mais de um milhão de instalações ativas. Kadence tinha mais de quinhentas mil e Neve mais de duzentas mil. Os números vêm do diretório oficial e podem mudar.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Exemplos de plugins">
+      <p class="eyebrow">03 · Plugins populares</p>
+      <h2>Três exemplos</h2>
+      <div class="grid">
+        <article class="card"><h3>Contact Form 7</h3><p>Criação de formulários de contato.</p></article>
+        <article class="card"><h3>Yoast SEO</h3><p>Ferramentas para otimizar conteúdo para buscadores.</p></article>
+        <article class="card"><h3>WooCommerce</h3><p>Recursos para montar uma loja virtual.</p></article>
+      </div>
+      <p><strong>Demonstração:</strong> Classic Editor — plugin oficial para usar a tela clássica de edição.</p>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>Escolhemos exemplos de finalidades diferentes. Contact Form 7 cria formulários, Yoast SEO ajuda na otimização para buscadores e WooCommerce acrescenta recursos de loja. Para o tutorial prático, usamos Classic Editor.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Como instalar e ativar um tema">
+      <p class="eyebrow">04 · Demonstração de tema</p>
+      <h2>Instalar e ativar</h2>
+      <ol>
+        <li>Painel → <strong>Aparência → Temas</strong>.</li>
+        <li>Selecione <strong>Adicionar novo tema</strong>.</li>
+        <li>Pesquise <strong>Astra</strong> → <strong>Instalar</strong> → <strong>Ativar</strong>.</li>
+        <li>Abra o site e observe a apresentação.</li>
+        <li>Depois, reative <strong>GMRsVoiage</strong> para manter a identidade do blog.</li>
+      </ol>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>Na gravação, mostre o painel e siga os passos. Explique que trocar o tema muda a apresentação, não apaga automaticamente os posts. Ao terminar, reative GMRsVoiage.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Recursos do tema GMRsVoiage">
+      <p class="eyebrow">05 · Tema deste blog</p>
+      <h2>GMRsVoiage</h2>
+      <div class="split">
+        <article class="card"><h3>Vaporwave</h3><p>Fundo escuro, roxo neon e ciano.</p></article>
+        <article class="card"><h3>Frutiger Aero</h3><p>Azul claro, superfícies translúcidas e verde suave.</p></article>
+      </div>
+      <p>É um tema filho do Twenty Twenty-Two. O botão flutuante alterna os visuais e guarda a preferência.</p>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>Mostre a página inicial, alterne entre os modos, abra um post e uma página e reduza a largura para mostrar o layout de celular. O conteúdo permanece; o tema muda sua apresentação.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Como instalar e usar um plugin">
+      <p class="eyebrow">06 · Demonstração de plugin</p>
+      <h2>Classic Editor</h2>
+      <ol>
+        <li>Painel → <strong>Plugins → Adicionar plugin</strong>.</li>
+        <li>Pesquise <strong>Classic Editor</strong> → <strong>Instalar agora</strong> → <strong>Ativar</strong>.</li>
+        <li>Abra <strong>Configurações → Escrita</strong>.</li>
+        <li>Confira o editor padrão e a opção de alternar entre editores.</li>
+        <li>Abra um post para mostrar o editor clássico.</li>
+      </ol>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>O Classic Editor altera a tela de edição. Mostre as opções em Configurações e Escrita, depois abra um post. O plugin não muda o tema, ele muda uma funcionalidade do painel.</p></div></details>
+    </section>
+
+    <section class="slide" aria-label="Blog de demonstração e referências">
+      <p class="eyebrow">07 · Encerramento</p>
+      <h2>Blog pronto para demonstrar</h2>
+      <div class="split">
+        <article class="card"><h3>Conteúdo</h3><p><strong>10 posts</strong> e <strong>5 páginas</strong> publicados.</p></article>
+        <article class="card"><h3>Grupo</h3><p>[preencher nomes de todos os integrantes]</p></article>
+      </div>
+      <p class="references">
+        Referências:
+        <a href="https://wordpress.org/themes/astra/">Astra</a> ·
+        <a href="https://wordpress.org/themes/kadence/">Kadence</a> ·
+        <a href="https://wordpress.org/themes/neve/">Neve</a> ·
+        <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> ·
+        <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a> ·
+        <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> ·
+        <a href="https://wordpress.org/plugins/classic-editor/">Classic Editor</a>
+      </p>
+      <details><summary>Fala sugerida</summary><div class="notes"><p>Resuma: tema é apresentação, plugin é funcionalidade. O blog tem os dez posts e cinco páginas pedidos. Agradeça e encerre. As referências foram consultadas em 20 de outubro de 2026.</p></div></details>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Controles da apresentação">
+    <button id="prev" type="button" aria-label="Slide anterior">← Anterior</button>
+    <span id="counter" aria-live="polite">1 / 8</span>
+    <button id="next" type="button" aria-label="Próximo slide">Próximo →</button>
+  </nav>
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll(".slide")];
+      const counter = document.querySelector("#counter");
+      const progress = document.querySelector("#progress");
+      let current = 0;
+      const show = (index) => {
+        current = Math.max(0, Math.min(slides.length - 1, index));
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === current);
+          slide.setAttribute("aria-hidden", String(i !== current));
+        });
+        counter.textContent = `${current + 1} / ${slides.length}`;
+        progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      };
+      document.querySelector("#prev").addEventListener("click", () => show(current - 1));
+      document.querySelector("#next").addEventListener("click", () => show(current + 1));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight" || event.key === " ") show(current + 1);
+        if (event.key === "ArrowLeft") show(current - 1);
+        if (event.key === "Home") show(0);
+        if (event.key === "End") show(slides.length - 1);
+        if (event.key.toLowerCase() === "f" && !event.repeat) {
+          if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+          else document.exitFullscreen?.();
+        }
+      });
+      show(0);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/*
+Theme Name: GMRsVoiage
+Description: Visual identity inspired by the GMRsVoiage ecosystem, with Vaporwave and Frutiger Aero modes.
+Version: 1.0.0
+Template: twentytwentytwo
+Text Domain: gmrsvoiage
+*/
+
+:root {
+	--gmrs-bg: #080315;
+	--gmrs-surface: rgba(18, 8, 38, 0.9);
+	--gmrs-surface-strong: rgba(27, 10, 54, 0.96);
+	--gmrs-text: #f8f5ff;
+	--gmrs-muted: #c3b7d8;
+	--gmrs-accent: #d45bff;
+	--gmrs-accent-2: #00e8f2;
+	--gmrs-border: rgba(212, 91, 255, 0.58);
+	--gmrs-shadow: 0 18px 48px rgba(0, 0, 0, 0.38);
+	color-scheme: dark;
+}
+
+:root[data-gmrs-theme="aero"] {
+	--gmrs-bg: #dff2ff;
+	--gmrs-surface: rgba(255, 255, 255, 0.84);
+	--gmrs-surface-strong: rgba(255, 255, 255, 0.96);
+	--gmrs-text: #102b45;
+	--gmrs-muted: #3e5d75;
+	--gmrs-accent: #0577bd;
+	--gmrs-accent-2: #059b8f;
+	--gmrs-border: rgba(14, 142, 199, 0.42);
+	--gmrs-shadow: 0 18px 48px rgba(27, 98, 143, 0.16);
+	color-scheme: light;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--gmrs-bg);
+	color: var(--gmrs-text);
+	font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+	line-height: 1.7;
+	transition: background-color 300ms ease, color 300ms ease;
+}
+
+.wp-site-blocks {
+	isolation: isolate;
+	min-height: 100vh;
+	position: relative;
+}
+
+.wp-site-blocks::before,
+.wp-site-blocks::after {
+	content: "";
+	inset: 0;
+	pointer-events: none;
+	position: fixed;
+	z-index: -1;
+}
+
+.wp-site-blocks::before {
+	background:
+		radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--gmrs-accent) 18%, transparent), transparent 46%),
+		radial-gradient(ellipse at 95% 72%, color-mix(in srgb, var(--gmrs-accent-2) 12%, transparent), transparent 40%),
+		var(--gmrs-bg);
+}
+
+.wp-site-blocks::after {
+	background-image:
+		linear-gradient(to right, color-mix(in srgb, var(--gmrs-accent) 35%, transparent) 1px, transparent 1px),
+		linear-gradient(to bottom, color-mix(in srgb, var(--gmrs-accent-2) 28%, transparent) 1px, transparent 1px);
+	background-position: center bottom;
+	background-size: 52px 52px;
+	mask-image: linear-gradient(to top, black, transparent 55%);
+	opacity: 0.16;
+}
+
+.wp-site-blocks > header.wp-block-template-part {
+	background: color-mix(in srgb, var(--gmrs-bg) 86%, transparent);
+	border-bottom: 1px solid var(--gmrs-border);
+	box-shadow: 0 8px 30px color-mix(in srgb, var(--gmrs-accent) 16%, transparent);
+}
+
+.wp-site-blocks > header.wp-block-template-part > .wp-block-group {
+	background: transparent !important;
+	color: var(--gmrs-text);
+}
+
+.wp-site-blocks > header.wp-block-template-part header.wp-block-template-part > .wp-block-group > .wp-block-group.alignwide {
+	padding-block: 1rem !important;
+}
+
+body.home .wp-site-blocks > header.wp-block-template-part .wp-block-image.alignwide,
+body.blog .wp-site-blocks > header.wp-block-template-part .wp-block-image.alignwide,
+.wp-site-blocks > header.wp-block-template-part + .wp-block-spacer {
+	display: none;
+}
+
+.wp-block-site-title {
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+	font-style: normal;
+	font-weight: 800;
+	letter-spacing: 0.035em;
+}
+
+.wp-block-site-title a {
+	align-items: center;
+	background: linear-gradient(100deg, var(--gmrs-text), var(--gmrs-accent-2) 54%, var(--gmrs-accent));
+	background-clip: text;
+	color: transparent;
+	display: inline-flex;
+	text-decoration: none;
+	-webkit-background-clip: text;
+}
+
+.wp-block-site-title a::before {
+	align-items: center;
+	background: linear-gradient(145deg, var(--gmrs-accent-2), var(--gmrs-accent));
+	border: 1px solid color-mix(in srgb, var(--gmrs-text) 45%, transparent);
+	border-radius: 50%;
+	box-shadow: 0 0 18px color-mix(in srgb, var(--gmrs-accent-2) 36%, transparent), inset 0 1px 3px rgba(255, 255, 255, 0.65);
+	color: white;
+	content: "G";
+	display: inline-flex;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 1.1rem;
+	height: 2.35rem;
+	justify-content: center;
+	letter-spacing: 0;
+	margin-right: 0.75rem;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+	width: 2.35rem;
+	-webkit-text-fill-color: white;
+}
+
+.wp-block-navigation .wp-block-navigation-item__content {
+	border: 1px solid transparent;
+	border-radius: 999px;
+	color: var(--gmrs-text) !important;
+	font-size: 0.95rem;
+	padding: 0.45rem 0.85rem;
+	text-decoration: none;
+	transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.wp-block-navigation .wp-block-navigation-item__content:hover,
+.wp-block-navigation .wp-block-navigation-item__content:focus-visible {
+	background: var(--gmrs-surface);
+	border-color: var(--gmrs-border);
+	color: var(--gmrs-accent-2) !important;
+	transform: translateY(-1px);
+}
+
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close {
+	color: var(--gmrs-text) !important;
+}
+
+.gmrs-home-intro {
+	background:
+		radial-gradient(ellipse at 85% 12%, color-mix(in srgb, var(--gmrs-accent-2) 18%, transparent), transparent 44%),
+		linear-gradient(130deg, var(--gmrs-surface-strong), var(--gmrs-surface));
+	border: 1px solid var(--gmrs-border);
+	border-radius: 1.5rem;
+	box-shadow: var(--gmrs-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	margin: 1rem auto 2.5rem;
+	max-width: 1160px;
+	padding: clamp(2rem, 6vw, 4.5rem);
+	position: relative;
+	overflow: hidden;
+}
+
+.gmrs-home-intro::after {
+	border: 1px solid color-mix(in srgb, var(--gmrs-accent-2) 35%, transparent);
+	border-radius: 50%;
+	content: "";
+	height: 17rem;
+	position: absolute;
+	right: -6rem;
+	top: -9rem;
+	width: 17rem;
+}
+
+.gmrs-home-intro__eyebrow {
+	color: var(--gmrs-accent-2);
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	margin: 0 0 0.75rem;
+	text-transform: uppercase;
+}
+
+.gmrs-home-intro h2 {
+	background: linear-gradient(95deg, var(--gmrs-text), var(--gmrs-accent-2) 60%, var(--gmrs-accent));
+	background-clip: text;
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: 800;
+	letter-spacing: -0.035em;
+	line-height: 1.12;
+	margin: 0;
+	max-width: 780px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gmrs-home-intro__copy {
+	color: var(--gmrs-muted);
+	font-size: clamp(1rem, 1.5vw, 1.15rem);
+	margin: 1rem 0 0;
+	max-width: 680px;
+}
+
+main.wp-block-query {
+	margin-inline: auto;
+	max-width: 1160px;
+	padding: 0 1.5rem 4rem;
+}
+
+.wp-block-post-template {
+	display: grid !important;
+	gap: 1.25rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wp-block-post-template > li {
+	background: var(--gmrs-surface);
+	border: 1px solid var(--gmrs-border);
+	border-radius: 1.15rem;
+	box-shadow: var(--gmrs-shadow);
+	margin: 0 !important;
+	min-width: 0;
+	overflow: hidden;
+	padding: clamp(1.25rem, 3vw, 2rem);
+	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.wp-block-post-template > li:hover {
+	border-color: var(--gmrs-accent-2);
+	box-shadow: var(--gmrs-shadow), 0 0 26px color-mix(in srgb, var(--gmrs-accent) 20%, transparent);
+	transform: translateY(-3px);
+}
+
+.wp-block-post-template > li > .wp-block-group {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.wp-block-post-title {
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+	font-style: normal;
+	font-weight: 750;
+	line-height: 1.25;
+	margin: 0 0 1rem;
+}
+
+.wp-block-post-title a,
+.wp-block-post-content a,
+.wp-block-post-excerpt a,
+.wp-block-query-pagination a {
+	color: var(--gmrs-accent-2);
+	text-decoration-color: color-mix(in srgb, var(--gmrs-accent-2) 45%, transparent);
+	text-underline-offset: 0.2em;
+}
+
+.wp-block-post-title a {
+	color: var(--gmrs-text);
+	text-decoration: none;
+}
+
+.wp-block-post-title a:hover {
+	color: var(--gmrs-accent-2);
+}
+
+.wp-block-post-featured-image {
+	border: 1px solid var(--gmrs-border);
+	border-radius: 0.8rem;
+	margin: 0 0 1rem !important;
+	overflow: hidden;
+}
+
+.wp-block-post-featured-image img {
+	display: block;
+	height: auto;
+	transition: transform 250ms ease;
+	width: 100%;
+}
+
+.wp-block-post-template > li:hover .wp-block-post-featured-image img {
+	transform: scale(1.025);
+}
+
+.wp-block-columns {
+	margin-block: 0 !important;
+}
+
+.wp-block-columns > .wp-block-column:empty {
+	display: none;
+}
+
+.wp-block-post-excerpt {
+	color: var(--gmrs-muted);
+	flex: 1;
+	font-size: 1rem;
+}
+
+.wp-block-post-date {
+	border-top: 1px solid var(--gmrs-border);
+	color: var(--gmrs-muted);
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 0.78rem !important;
+	letter-spacing: 0.04em;
+	margin-top: 1rem;
+	padding-top: 0.8rem;
+	text-transform: uppercase;
+}
+
+.wp-block-query-pagination {
+	color: var(--gmrs-text);
+	margin-top: 2rem;
+}
+
+.wp-block-query-pagination > * {
+	background: var(--gmrs-surface);
+	border: 1px solid var(--gmrs-border);
+	border-radius: 999px;
+	padding: 0.45rem 0.8rem;
+}
+
+.wp-site-blocks > main:not(.wp-block-query) {
+	background: var(--gmrs-surface);
+	border: 1px solid var(--gmrs-border);
+	border-radius: 1.25rem;
+	box-shadow: var(--gmrs-shadow);
+	box-sizing: border-box;
+	margin: 3rem auto;
+	max-width: min(900px, calc(100% - 3rem));
+	padding: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.wp-block-post-content,
+.wp-site-blocks > main:not(.wp-block-query) {
+	color: var(--gmrs-text);
+}
+
+.wp-block-post-content h2,
+.wp-block-post-content h3,
+.wp-site-blocks > main:not(.wp-block-query) h2,
+.wp-site-blocks > main:not(.wp-block-query) h3 {
+	color: var(--gmrs-accent-2);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.wp-block-template-part footer,
+footer.wp-block-template-part {
+	border-top: 1px solid var(--gmrs-border);
+	color: var(--gmrs-muted);
+}
+
+.wp-block-template-part footer .wp-block-group,
+footer.wp-block-template-part .wp-block-group {
+	background: transparent !important;
+	color: var(--gmrs-muted);
+}
+
+.wp-block-template-part footer a,
+footer.wp-block-template-part a {
+	color: var(--gmrs-accent-2);
+}
+
+.gmrs-theme-toggle {
+	align-items: center;
+	backdrop-filter: blur(14px);
+	background: var(--gmrs-surface-strong);
+	border: 1px solid var(--gmrs-border);
+	border-radius: 999px;
+	box-shadow: var(--gmrs-shadow);
+	color: var(--gmrs-text);
+	cursor: pointer;
+	display: inline-flex;
+	font: 700 0.85rem/1 "Segoe UI", sans-serif;
+	gap: 0.55rem;
+	min-height: 44px;
+	padding: 0.7rem 1rem;
+	position: fixed;
+	right: max(1rem, env(safe-area-inset-right));
+	bottom: max(1rem, env(safe-area-inset-bottom));
+	z-index: 1000;
+}
+
+.gmrs-theme-toggle:hover,
+.gmrs-theme-toggle:focus-visible {
+	border-color: var(--gmrs-accent-2);
+	box-shadow: var(--gmrs-shadow), 0 0 20px color-mix(in srgb, var(--gmrs-accent-2) 24%, transparent);
+	outline: 2px solid transparent;
+	transform: translateY(-2px);
+}
+
+.gmrs-theme-toggle__icon {
+	color: var(--gmrs-accent-2);
+	font-size: 1rem;
+}
+
+@media (min-width: 900px) {
+	.wp-block-post-template {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	.wp-site-blocks > header.wp-block-template-part > .wp-block-group {
+		padding-inline: 1rem !important;
+	}
+
+	.wp-site-blocks > header.wp-block-template-part header.wp-block-template-part > .wp-block-group > .wp-block-group.alignwide {
+		flex-wrap: nowrap !important;
+		gap: 0.5rem;
+	}
+
+	.wp-block-site-title {
+		font-size: 0.92rem;
+		letter-spacing: 0;
+	}
+
+	.wp-block-site-title a::before {
+		height: 2rem;
+		margin-right: 0.5rem;
+		width: 2rem;
+	}
+
+	.wp-block-post-template {
+		grid-template-columns: 1fr;
+	}
+
+	.gmrs-home-intro {
+		border-radius: 1rem;
+		margin: 0.5rem 1rem 1.75rem;
+		padding: 1.6rem;
+	}
+
+	main.wp-block-query {
+		padding-inline: 1rem;
+	}
+
+	.gmrs-theme-toggle {
+		min-height: 42px;
+		right: max(0.75rem, env(safe-area-inset-right));
+		bottom: max(0.75rem, env(safe-area-inset-bottom));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+	}
+}
