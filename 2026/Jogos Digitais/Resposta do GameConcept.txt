@@ -1,0 +1,20 @@
+Resposta do professor haver com o Game Concept:
+
+Luiz Carlos Pinheiro Junior • 17:28
+
+ Rafael, o Aberratio Mentis apresenta uma proposta clara e um diferencial concreto: utilizar o mesmo ambiente com mudanças nos controles, na percepção e nas interações de cada personagem. A reutilização do cenário, o uso de assets e as referências ajudam a orientar o desenvolvimento.
+
+O principal ajuste é definir a terceira perspectiva e alinhar o escopo mínimo à tabela de prioridades. O mínimo prevê um minigame por condição e áudio reativo, mas a terceira mecânica e o áudio aparecem como SHOULD. Decida quais elementos realmente precisam estar presentes para concluir a experiência.
+
+Explique como cada minigame começa, quais comandos exige e como ocorrem sucesso, falha e nova tentativa. Delimite os percursos e teste opções para ajustar ou desativar a força de câmera, preservando a compreensão da experiência.
+
+Complemente as referências com pesquisas e relatos sobre as vivências representadas, tratando cada personagem como uma experiência particular e evitando sugerir que suas dificuldades se resolvem apenas com esforço. Priorize uma perspectiva completa e testada antes de ampliar para as outras, incluindo orientações, conclusão e build nas prioridades.
+Luiz Carlos Pinheiro Junior • 17:28
+Ajustes prioritários
+1. Definir a terceira perspectiva. Explicar quem é o personagem, seu objetivo e como sua experiência difere das outras. Não é obrigatório criar um terceiro minigame, desde que a perspectiva tenha função clara e o escopo seja atualizado.
+2. Alinhar o mínimo aos MUST. Decidir quais alterações visuais, sonoras e mecânicas são indispensáveis. Incluir progressão, conclusão, orientações de interação e build nas prioridades.
+3. Precisar o ciclo dos minigames. Informar como começam, quais comandos são usados, como o jogador reconhece sucesso ou falha e de onde retoma. Definir limites para que a oposição dos controles não impeça indefinidamente a conclusão.
+4. Delimitar cada percurso. Indicar quantidade de interações e duração aproximada pretendida. Esclarecer também o componente “investigativo”: quais pistas ou descobertas fazem parte das ações do jogador?
+5. Testar conforto e compreensão. Prever ajuste ou desativação da força de câmera, com outra forma de apresentar a distração. Testar se as pessoas compreendem a intenção da mecânica e conseguem distinguir resistência planejada de falha nos controles.
+6. Fundamentar as representações. Complementar as referências de jogos com pesquisas e relatos de pessoas com essas vivências. Apresentar os personagens como experiências particulares, evitando tratar uma mecânica como reprodução universal de depressão ou TDAH, ou associar dificuldade a falta de esforço.
+7. Prever redução de escopo. Validar primeiro uma perspectiva completa e um trecho compartilhado do cenário. Definir quais efeitos e interações poderão ser simplificados antes de expandir para as demais.

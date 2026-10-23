@@ -8,4 +8,3 @@ Os projetos, exercícios e anotações da disciplina devem permanecer neste dire
 
 ## Estado atual
 
-A estrutura da disciplina está criada, mas ainda não há projetos ou exercícios versionados além desta documentação.
