@@ -1,0 +1,75 @@
+.lista-anuncios {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.anuncio {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #FFFFFF;
+    border: 3px solid #DDDDDD;
+    border-radius: 4px;
+    
+}
+.anuncio img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit:cover;
+}
+
+.anuncio-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    overflow-wrap: anywhere;
+}
+
+.anuncio h3 {
+    margin: 0 0 12px;
+}
+
+.anuncio p {
+    margin: 0 0 16px;
+}
+
+.anuncio a {
+    margin: 0 0 16px;
+}
+
+.anuncio-price {
+    color: #006900;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.botao-anuncio {
+    display: block;
+    margin-top: auto;
+    background-color: #00690069;
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao-anuncio:hover, .botao-anuncio:focus-visible {
+    background-color: #006900;  
+}
+
+@media (max-width: 900px) {
+    .lista-anuncios {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 500px) {
+    .lista-anuncios {
+        grid-template-columns: 1fr;
+    }
+}
+

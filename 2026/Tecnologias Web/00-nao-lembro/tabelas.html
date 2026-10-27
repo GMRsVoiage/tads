@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Tabelas em HTMLs</title>
+</head>
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <h2>Exemplo de Tablea Horizontal</h2>
+<table border=""1>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Cidade</th>
+    </tr>
+    <tr>
+        <th>069</th>
+        <th>Sixatenine</th>
+        <th>Sxtenin@gmail.com</th>
+        <th>Campos Gerais</th>
+    </tr>
+</table>
+<hr>
+
+<h2>Exemplo de Tabela Vertical</h2>
+<table border=""1>
+    <tr>
+        <th>ID</th>
+            <td>069</td>
+            <td>078</td>
+            <td>099</td>
+    </tr>
+    <tr>
+        <th>Nome</th>
+            <td>Sixatenine</td>
+            <td>Seveight</td>
+            <td>Ninne</td>
+    </tr>
+        <th>Email</th>
+            <td>Sxtenin@gmail.com</td>
+            <td>Sevght@gmail.com</td>
+            <td>Nine@gmail.com</td>
+    <tr>
+        <th>Cidade</th>
+            <td>Lagoinha</td>
+            <td>Cubatão</td>
+            <td>Paudalho</td>
+    </tr>
+
+    </table>
+
+    <hr>
+
+    <h2>Tabela de Horarios</h2>
+<table border="2">
+<!-- dias da semana -->
+    <tr>
+        <th></th>
+            <th>Segunda-Feira</th>
+            <th>Terça-Feira</th>
+            <th>Quarta-Feira</th>
+            <th>Quinta-Feira</th>
+            <th>Sexta-Feira</th>
+    </tr>
+
+    <tr>
+        <th>Disciplina</th>
+            <td>Tecnologias Web</td>
+            <td>Analise de Sistemas</td>
+            <td>Algoritmos de Programação II</td>
+            <td>Oficina de Produção e Leitura de textos Cientificos</td>
+            <td>Interação Humano Computador</td>
+    </tr>
+
+    <tr>
+        <th>Docente</th>
+            <td>Paulo</td>
+            <td>Acau</td>
+            <td>Gregory</td>
+            <td>Guilherme</td>
+            <td>Carlo</td>
+    </tr>
+
+<!--    <tr>
+        <th>Intervalo</th>
+            <td>Intervalo</td>
+            <td>Intervalo</td>
+            <td>Intervalo</td>
+            <td>Intervalo</td>
+            <td>Intervalo</td>
+    </tr>  -->
+
+    <tr>
+        <th colspan="6">Intervalo</th>
+    </tr>
+
+    <tr>
+        <th>Disciplina</th>
+            <td>Tecnologias Web</td>
+            <td>Analise de Sistemas</td>
+            <td>Algoritmos de Programação II</td>
+            <td>Oficina de Produção e Leitura de textos Cientificos</td>
+            <td>Interação Humano Computador</td>
+    </tr>
+
+    <tr>
+        <th>Docente</th>
+            <td>Paulo</td>
+            <td>Acau</td>
+            <td>Gregory</td>
+            <td>Guilherme</td>
+            <td>Carlo</td>
+    </tr>
+    
+</table>
+
+    <hr>
+    
+
+    <h2> Exemplo de Tabela com Colspan</h2>
+<table border="2">
+<tr>
+    <th>Docente</th>
+    <th>Paulo</th>
+    <th colspan="2">Alan</th>
+</tr>
+<tr>
+    <th>Disciplina</th>
+    <td>Tecnologias Web</td>
+    <td>Analise de Sistemas</td>
+    <td>Inteligencia Artificial</td>
+</tr>
+</table>
+
+<hr>
+
+<h2> Exemplo da Tabela com Rowspan:</h2>
+
+<table border="1">
+    <tr>
+        <th>Docente</th>
+        <th>Disciplina</th>
+    </tr>
+
+    <tr>
+        <td>Paulo</td>
+        <td>Tecnologias Web</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2">Alan</td>
+        <td>Analise de Sistemas</td>
+    </tr>
+    <tr>
+        <td> Inteligencia Artificial</td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+<h2> Tabela do Quadro</h2>
+
+<table border="1">
+<tr>
+<th colspan="3">A</th>
+<td rowspan="3">B</td>
+<th colspan="3">C</th>
+
+</tr>
+
+<tr>
+<td>D</td>    
+<td>E</td>    
+<td>F</td>  
+
+<td>G</td>    
+<td>H</td>    
+<td>J</td> 
+</tr>
+
+<tr>
+<th colspan="3">J</th>
+<th colspan="3">K</th>
+</tr>
+
+
+<tr>
+    <th colspan="7">L</th>
+</tr>
+
+
+<tr>
+    <td>M</td>
+    <td>N</td>
+    <td>O</td>
+    <td>P</td>
+    <td>Q</td>
+    <td>R</td>
+    <td>S</td>
+</tr>
+
+
+</table>
+<h2> Tabela do Quadro v2</h2>
+
+<table border="1">
+<tr>
+<th colspan="3">A</th>
+<td rowspan="3">B</td>
+<th colspan="2">C</th>
+<th rowspan="2">I</th>
+
+</tr>
+
+<tr>
+<td>D</td>    
+<td>E</td>    
+<td>F</td>  
+<td>G</td>    
+<td>H</td>     
+</tr>
+
+<tr>
+<th colspan="3">J</th>
+<th colspan="2">K</th>
+<td>Z</td>
+</tr>
+
+
+<tr>
+    <th colspan="7">L</th>
+</tr>
+
+
+<tr>
+    <td>M</td>
+    <td>N</td>
+    <td>O</td>
+    <td>P</td>
+    <td>Q</td>
+    <td>R</td>
+    <td>S</td>
+</tr>
+
+
+</table>
+
+</body>
+</html>

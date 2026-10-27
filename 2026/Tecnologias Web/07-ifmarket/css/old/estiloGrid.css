@@ -1,0 +1,80 @@
+/* Base para layouts com CSS Grid */
+article.adsvelho {
+    /* Define o estilo dos anúncios, incluindo borda, padding e sombra. */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    max-width: 350px; /* Limita a largura máxima dos anúncios */
+    img {
+        /* Define a largura máxima das imagens dentro dos anúncios. */
+        max-width: 100%;
+        height: auto;
+    }
+    p.description {
+        /* Define o estilo do parágrafo de descrição dentro dos anúncios. */
+        font-size: 0.9rem;
+        color: #555;
+    }
+    p.price {
+        /* Define o estilo do parágrafo de preço dentro dos anúncios. */
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #000;
+    }
+    h3.title {
+        /* Define o estilo do título dentro dos anúncios. */
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    a.link {
+        /* Define o estilo do link dentro dos anúncios. */
+        color: #007BFF;
+        text-decoration: none;
+        onhover {
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            color: #57013d;
+        }
+    }
+    
+}
+
+.container {
+	/* Limita a largura do conteúdo e centraliza o container. */
+	width: min(100% - 2rem, 1200px);
+	margin-inline: auto;
+}
+
+.grid {
+	/* Ativa o layout Grid e define o espaçamento entre os itens. */
+	display: grid;
+	gap: 1rem;
+}
+
+.grid--12 {
+	/* Cria 12 colunas flexíveis com a mesma largura. */
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid--auto {
+	/* Cria colunas automáticas que se adaptam ao espaço disponível. */
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid__item {
+	/* Impede que o conteúdo do item cause overflow no grid. */
+	min-width: 0;
+}
+
+.grid__item--full {
+	/* Faz o item ocupar todas as colunas disponíveis. */
+	grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+	/* Em telas pequenas, organiza o grid em uma única coluna. */
+	.grid--12 {
+		grid-template-columns: 1fr;
+	}
+}
