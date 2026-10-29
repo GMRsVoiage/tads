@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1> Uma coletanea de formularios, toods eles estão dentro do (forms)</forms></h1>
+    <form>  
+        <label>Nome:</label><br>
+        <input type="text" minlength="3" maxlength="30" placeholder="Informe o seu nome completo" size="50"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" placeholder="matricula@estudantes.ifpr.edu.br" size="50"><br><br>
+    
+        <label>Idade:</label><br>
+        <input type="number"><br><br>
+
+        <label>Senha:</label><br>
+        <input type="password" minlength="4" maxlength="10"><br><br>
+
+        <label>Data de Nascimento></label><br>
+        <input type="date"><br><br>
+
+        <label>Data</label><br>
+        <input type="time"><br><br>
+        
+        <label>Data e Hora:</label><br>   
+        <input type="datetime-local"><br><br>
+
+        <label>Gestante?</label><br>
+        <input type="radio" name="gestante" value="Sim">Sim<br>
+        <input type="radio" name="gestante" value="Não" checked>Não<br>
+
+        <label>Turno</label><br>
+        <input type="radio" name="Turno" value="Manhã">Manhã<br>
+        <input type="radio" name="Turno" value="Tarde">Tarde<br>
+        <input type="radio" name="Turno" value="Noite">Noite<br>
+
+        <label>Cursos de Interesse</label><br>
+        <input type="checkbox" name="TADS" checked> Tecnologia em Analise e Desenvolvimento de Sistemas<br>
+        <input type="checkbox" name="TMI" checked> Tecnologia em Manutenção Industrial<br>
+        <input type="checkbox" name="TAI" checked> Tecnologia em Automação Industrial<br>
+        <input type="checkbox" name="LFIS" checked> Licenciatura em Fisica<br>
+
+        <label>Foto do Perfil:</label><br>
+        <input type="file"  accept="image/*"><br><br>
+
+        <label>Selecione uma cor:</label><br>
+        <input type="color" name="cor"><br><br>
+
+        <label>Avaliação da aula:</label><br>
+        <input type="range" min="0" max="10"><br><br>
+
+        <label>Input Hidden:</label><br><br>
+        <input type="hidden" value="10"><br><br>
+
+        <label>Salvar ou Limpar o Formulario?</label>
+        <input type="reset" value="Limpar"><br><br>
+        <input type="submit" value="Salvar"><br><br>
+
+
+    </form>
+
+</body>
+</html>

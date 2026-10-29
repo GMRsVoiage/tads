@@ -6,5 +6,9 @@
 
 Os projetos, exercícios e anotações da disciplina devem permanecer neste diretório. Quando forem adicionadas tecnologias, engines ou projetos específicos, este README deve ser atualizado com instruções de execução e a finalidade de cada projeto.
 
+## Checklist
+
+O acompanhamento das etapas da disciplina e do projeto Aberratio Mentis está em [CHECKLIST.md](CHECKLIST.md).
+
 ## Estado atual
 
