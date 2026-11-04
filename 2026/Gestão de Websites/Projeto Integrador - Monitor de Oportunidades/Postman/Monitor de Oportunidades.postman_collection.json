@@ -1,0 +1,138 @@
+ {
+  "info": {
+    "name": "Monitor de Oportunidades",
+    "description": "Requisições para demonstração da API do Projeto Integrador.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://20.151.3.84:3000"
+    },
+    {
+      "key": "opportunityId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/health"
+      }
+    },
+    {
+      "name": "Listar oportunidades",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/opportunities"
+      }
+    },
+    {
+      "name": "Filtrar oportunidades",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/opportunities?q=IFPR&category=PSS",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "opportunities"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "IFPR"
+            },
+            {
+              "key": "category",
+              "value": "PSS"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cadastrar usuário",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Usuário de demonstração\",\n  \"email\": \"demo{{$timestamp}}@example.com\",\n  \"password\": \"SenhaDemo123\"\n}"
+        },
+        "url": "{{baseUrl}}/api/auth/register"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"SEU_EMAIL\",\n  \"password\": \"SUA_SENHA\"\n}"
+        },
+        "url": "{{baseUrl}}/api/auth/login"
+      }
+    },
+    {
+      "name": "Cadastrar oportunidade",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Novo processo seletivo\",\n  \"organization\": \"IFPR\",\n  \"city\": \"Telêmaco Borba/PR\",\n  \"description\": \"Oportunidade para demonstração da API.\",\n  \"deadline\": \"31/12/2026\",\n  \"link\": \"https://www.ifpr.edu.br/\",\n  \"category_id\": 2\n}"
+        },
+        "url": "{{baseUrl}}/api/opportunities"
+      }
+    },
+    {
+      "name": "Editar oportunidade",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": {{opportunityId}},\n  \"title\": \"Oportunidade atualizada\",\n  \"organization\": \"IFPR\",\n  \"city\": \"Telêmaco Borba/PR\",\n  \"description\": \"Registro editado pelo Postman.\",\n            \"deadline\": \"31/12/2026\",\n  \"link\": \"https://www.ifpr.edu.br/\",\n  \"category_id\": 2,\n  \"status\": \"aberto\"\n}"
+        },
+        "url": "{{baseUrl}}/api/opportunities"
+      }
+    },
+    {
+      "name": "Excluir oportunidade",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/opportunities?id={{opportunityId}}"
+      }
+    }
+  ]
+}
