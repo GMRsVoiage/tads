@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server"; import bcrypt from "bcryptjs"; import {db} from "../../../../lib/db";
+export async function POST(req){const b=await req.json();const [rows]=await db.execute("SELECT * FROM users WHERE email=?",[(b.email||"").toLowerCase()]);const u=rows[0];if(!u||!(await bcrypt.compare(b.password||"",u.password_hash)))return NextResponse.json({error:"Credenciais inválidas."},{status:401});return NextResponse.json({user:{id:u.id,name:u.name,email:u.email}})}
