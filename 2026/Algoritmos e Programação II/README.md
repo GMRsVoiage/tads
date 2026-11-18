@@ -39,6 +39,10 @@ Materiais da disciplina de **Algoritmos e Programação II**, ministrada pelo pr
 
 - `pratica_8.1.cpp`
 
+### Prática / atividade 9.1
+
+- `atividade_9.1.cpp`
+
 ## Observação
 
 Os nomes dos arquivos preservam, sempre que possível, a identificação usada originalmente nas aulas e atividades. Alterações de organização não devem modificar as soluções acadêmicas sem uma solicitação explícita.
